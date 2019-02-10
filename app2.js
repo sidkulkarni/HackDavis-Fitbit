@@ -12,7 +12,7 @@ console.log(userId);
 
 
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'httpss://api.fitbit.com/1/user/'+ userId +'/activities/heart/date/2019-02-10/1d/15min/time/09:30/19:00.json');
+xhr.open('GET', 'httpss://api.fitbit.com/1/user/'+ userId +'/activities/heart/date/today/1d/15min/time/09:30/19:00.json');
 xhr.setRequestHeader("Authorization", 'Bearer ' + access_token);
 xhr.onload = function() {
    if (xhr.status === 200) {
@@ -42,7 +42,7 @@ xhr.send(params);
 
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const url = "https://example.com"; // site that doesn’t send Access-Control-*
+//const url = "https://example.com"; // site that doesn’t send Access-Control-*
 fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
 .then(response => response.text())
 .then(contents => console.log(contents))
